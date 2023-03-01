@@ -26,11 +26,13 @@ body {
 .pokemon-list {
   padding: 20px;
   width: 100%;
-  min-height: 300px;
+  min-height: 80vh;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+  background-image: linear-gradient(black, transparent), url("img/pika-bg.avif");
+  background-attachment: fixed;
 }
 
 .pokemon-card {
@@ -60,6 +62,8 @@ body {
 
 header {
   background-image: url("img/poke-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -73,6 +77,28 @@ h1 {
   color: white;
   line-height: 50%;
   text-shadow: 2px 2px 5px black;
+}
+
+.get-pokemon {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Pokemon X and Y", fantasy;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+  background-image: linear-gradient(rgb(255 78 78) 50%, white 50%);
+  box-shadow: inset 0 -0.6em 0 -0.35em rgb(0 0 0 / 17%);
+  text-align: center;
+  position: relative;
+}
+
+.get-pokemon:active {
+  top: 0.1em;
 }
 
 .pokemon-img {
@@ -100,6 +126,19 @@ h1 {
   flex-direction: column;
 }
 
+.stats {
+  display: flex;
+  gap: 5px;
+}
+
+.weight,
+.height {
+  background-color: goldenrod;
+  border-radius: 5%;
+  padding: 5px;
+  margin: 2px;
+}
+
 .types {
   display: flex;
 }
@@ -110,3 +149,71 @@ h1 {
   padding: 5px;
   margin: 5px;
 }
+
+.type-rock {
+  --color: #999799;
+}
+
+.type-electric {
+  --color: #ffea70;
+}
+
+.type-normal {
+  --color: #b09398;
+}
+
+.type-water {
+  --color: #0596c7;
+}
+
+.type-ice {
+  --color: #afeafd;
+}
+
+.type-flying {
+  --color: #7ae7c7;
+}
+
+.type-grass {
+  --color: #4a9681;
+}
+
+.type-psychic {
+  --color: #ffc6d9;
+}
+
+.type-ghost {
+  --color: #561d25;
+}
+
+.type-bug {
+  --color: #a2faa3;
+}
+
+.type-poison {
+  --color: #795663;
+}
+
+.type-ground {
+  --color: #d2b074;
+}
+
+.type-dragon {
+  --color: #da627d;
+}
+
+.type-steel {
+  --color: #1d8a99;
+}
+
+.type-fighting {
+  --color: #2f2f2f;
+}
+
+.type-fairy {
+  --color: #8f1342;
+}
+
+/* .type-default {
+  --color: "#2A1A1F";
+} */

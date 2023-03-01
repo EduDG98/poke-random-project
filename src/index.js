@@ -18,8 +18,10 @@ const addNewCard = () => {
         <div class="data">
             <h2 class="name">Pokemon</h2>
             <div class="info">
-                <div class="height">--- m</div>
-                <div class="weight">-- kg</div>
+                <div class="stats">
+                  <div class="height">--- m</div>
+                  <div class="weight">-- kg</div> 
+                </div>
                 <div class="types">-----</div>
             </div>
         </div>
@@ -32,7 +34,8 @@ const addNewCard = () => {
     types: lastCard.querySelector(".types"),
     pokemonImg: lastCard.querySelector(".pokemon-img"),
     weight: lastCard.querySelector(".weight"),
-    height: lastCard.querySelector(".height")
+    height: lastCard.querySelector(".height"),
+    element: lastCard
   };
 
   getRandomPokemon(card);
