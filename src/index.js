@@ -11,7 +11,9 @@ dom.boton.addEventListener("click", () => {
 });
 
 const addNewCard = () => {
-  dom.pokemonList.innerHTML +=
+  const pokemonCard = document.createElement("div");
+  pokemonCard.classList.add("pokemon-card", "dark");
+  pokemonCard.innerHTML +=
       /* HTML */
       `<div class="pokemon-card dark">
         <img src="" alt="" class="pokemon-img">
@@ -27,6 +29,7 @@ const addNewCard = () => {
         </div>
       </div>`;
 
+  dom.pokemonList.appendChild(pokemonCard);
   const lastCard = document.querySelector(".pokemon-card:last-child");
 
   const card = {
