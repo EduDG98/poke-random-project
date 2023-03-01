@@ -9,11 +9,16 @@ const dom = {
 const URL = "https://pokeapi.co/api/v2/pokemon/";
 const MAX_POKEMON = 151;
 
-const getRandomPokemon = (card) => {
+const getRandomPokemon = async (card) => {
   const idPokemon = getRandomNumber(MAX_POKEMON);
-  fetch(URL + idPokemon + "/")
-    .then(response => response.json())
-    .then(data => handleData(data, card));
+  const url = URL + idPokemon + "/";
+  const response = await fetch(url);
+  const data = await response.json;
+  return data;
+
+  // fetch(url)
+  //   .then(response => response.json())
+  //   .then(data => handleData(data, card));
 };
 
 dom.boton.addEventListener("click", () => {
@@ -36,7 +41,7 @@ const handleData = (data, card) => {
   });
 };
 
-const addNewCard = () => {
+const addNewCard = async () => {
   dom.pokemonList.innerHTML +=
       /* HTML */
       `<div class="pokemon-card dark">
@@ -61,6 +66,7 @@ const addNewCard = () => {
     height: lastCard.querySelector(".height")
   };
 
-  getRandomPokemon(card);
+  const data = await getRandomPokemon(card);
+  handleData(data, card);
   addCardEffect();
 };
