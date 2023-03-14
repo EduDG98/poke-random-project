@@ -10,7 +10,6 @@ export const handleData = (data, card) => {
   card.types.innerHTML = "";
   pokemonTypes.forEach(pokemonTypeItem => {
     const divType = document.createElement("div");
-    console.log("type-" + pokemonTypes);
     divType.classList.add("type", "type-" + pokemonTypes);
     divType.textContent = pokemonTypeItem;
     card.types.appendChild(divType);

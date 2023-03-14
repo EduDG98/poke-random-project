@@ -144,7 +144,7 @@ h1 {
 }
 
 .type {
-  background-color: salmon;
+  background-color: var(--color);
   border-radius: 5%;
   padding: 5px;
   margin: 5px;
@@ -187,7 +187,7 @@ h1 {
 }
 
 .type-bug {
-  --color: #a2faa3;
+  --color: #04b907;
 }
 
 .type-poison {
@@ -213,7 +213,3 @@ h1 {
 .type-fairy {
   --color: #8f1342;
 }
-
-/* .type-default {
-  --color: "#2A1A1F";
-} */
